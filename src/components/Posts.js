@@ -18,10 +18,10 @@ export default function Posts() {
             return <Post setActivePost={setActivePost} setUser={setUser} key={post.id} title={post.title} id={post.userId} body={post.body}></Post>
         })
     }
-
+    
     return (
         <div>
-            <h2>Posts:</h2>
+            <h2>Click on a post for more details:</h2>
             {displayPosts()}
             {user && <Modal 
                     activePost={activePost} 

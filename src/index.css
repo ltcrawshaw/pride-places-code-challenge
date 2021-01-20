@@ -29,6 +29,14 @@ button:hover {
   background-color: blue;
 }
 
+h1 {
+  color: #9c0ca4
+}
+
+h2 {
+  color: #9c0ea5;
+}
+
 .modal {
   border-radius: 12px;
   text-align: left;
