@@ -21,7 +21,7 @@ export default function Posts() {
 
     return (
         <div>
-            <h2>Posts</h2>
+            <h2>Posts:</h2>
             {displayPosts()}
             {user && <Modal 
                     activePost={activePost} 
