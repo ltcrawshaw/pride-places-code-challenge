@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React  from 'react';
 
+    //modal component defined, rendered in Posts.js
     export default function Modal(props) {
 
         const btnClick = () => {

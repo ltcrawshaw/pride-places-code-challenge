@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Modal from './Modal';
 
+// fetches author information and adds proper functionality to modal display
 export default function Post(props) {
     const onClick = () => {
         props.setActivePost(props);
@@ -18,7 +18,7 @@ export default function Post(props) {
         } )   
       })
     };
-    
+    //click handler on each post title
     return (
         <div>   
             <h3 onClick={onClick}>{props.title}</h3> 

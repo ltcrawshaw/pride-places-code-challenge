@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Posts from './components/Posts';
 
-
+//top level component, calls Posts component in jsx
 function App() {
   return (
     <div className="App">
