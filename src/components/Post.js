@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // fetches author information and adds proper functionality to modal display
 export default function Post(props) {
