@@ -5,7 +5,7 @@ import Modal from '../components/Modal'
 //sets state of posts and post to appropriate json data
 export default function Posts() {
     const [posts, setPosts] = useState([])
-    const [user, setUser] = React.useState(null);
+    const [user, setUser] = useState(null);
     const [activePost, setActivePost] = useState([]);
     
     useEffect (() => {
@@ -14,22 +14,25 @@ export default function Posts() {
       .then((json) => setPosts(json));
     }, []);
     
-    //loop through posts to display all of them
+    //iterate through posts to display all of them
     const displayPosts = () => {
         return posts.map((post) => {
             return <Post setActivePost={setActivePost} setUser={setUser} key={post.id} title={post.title} id={post.userId} body={post.body}></Post>
         })
     }
-    //renders modal when user is set
+
+    //renders modal if user set
+    const displayModal = () => {
+        if(user){
+            return <Modal activePost={activePost} userName={user.name} catchPhrase={user.company.catchPhrase}></Modal>
+        } 
+    }
+    
     return (
         <div>
             <h2>Click on a post for more details:</h2>
             {displayPosts()}
-            {user && <Modal 
-                    activePost={activePost} 
-                    userName={user.name} 
-                    catchPhrase={user.company.catchPhrase}
-                  ></Modal>}
+            {displayModal()}
         </div>
     );
 }
