@@ -10,7 +10,7 @@ import React  from 'react';
             backDrop.style.display = "none"   
         }
 
-
+        
         return (
             <div className="modal">
                 <p><span className="bold">Author: </span>{props.userName}</p>
